@@ -1,0 +1,741 @@
+{
+  "description": "",
+  "children": [
+    {
+      "step": "wt-cash-equal",
+      "children": [
+        {
+          "id": "0ee5a528-5e50-4490-b00b-7bd6e71c6461",
+          "step": "group",
+          "name": "20d BND vs 60d SH v1",
+          "children": [
+            {
+              "step": "wt-cash-equal",
+              "id": "3c262e1e-6f15-4cbf-a458-48aed9b2e92f",
+              "children": [
+                {
+                  "step": "if",
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "2283e197-8973-4886-8a49-b91ac0d29609",
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "ticker": "VIXY",
+                              "exchange": "BATS",
+                              "name": "ProShares VIX Short-Term Futures ETF",
+                              "id": "4fca3590-5c74-43ea-9f53-38344678a700",
+                              "step": "asset"
+                            }
+                          ]
+                        }
+                      ],
+                      "lhs-fn-params": {
+                        "window": 10
+                      },
+                      "is-else-condition?": false,
+                      "rhs-fixed-value?": true,
+                      "lhs-fn": "relative-strength-index",
+                      "lhs-val": "QQQ",
+                      "id": "103cda0f-38b8-43f0-8c1a-0d7b670bd9db",
+                      "comparator": "gt",
+                      "rhs-val": "81",
+                      "step": "if-child"
+                    },
+                    {
+                      "step": "if-child",
+                      "id": "a1ee731d-f807-4689-88cf-39ac9c680a22",
+                      "is-else-condition?": true,
+                      "children": [
+                        {
+                          "step": "wt-cash-equal",
+                          "children": [
+                            {
+                              "step": "if",
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "id": "21c04b71-8b3f-4ea0-b39d-8eca10253e92",
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "ticker": "VIXY",
+                                          "exchange": "BATS",
+                                          "name": "ProShares VIX Short-Term Futures ETF",
+                                          "id": "14662430-f4ca-4b00-8c6b-8a77b1630d0c",
+                                          "step": "asset"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "lhs-fn-params": {
+                                    "window": 10
+                                  },
+                                  "is-else-condition?": false,
+                                  "rhs-fixed-value?": true,
+                                  "lhs-fn": "relative-strength-index",
+                                  "lhs-val": "SPY",
+                                  "id": "cb9d9403-406d-4094-a5b6-db3f924bd01d",
+                                  "comparator": "gt",
+                                  "rhs-val": "80",
+                                  "step": "if-child"
+                                },
+                                {
+                                  "step": "if-child",
+                                  "id": "34fcc425-9d94-4e8c-9cf9-694c6db86a76",
+                                  "is-else-condition?": true,
+                                  "children": [
+                                    {
+                                      "step": "wt-cash-equal",
+                                      "children": [
+                                        {
+                                          "step": "if",
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "step": "asset",
+                                                      "ticker": "TECL",
+                                                      "id": "469bd36a-b37d-4288-ae93-b7c996844f59"
+                                                    }
+                                                  ],
+                                                  "id": "3d14ea57-ae6a-4e76-a22b-8d9509b00e26"
+                                                }
+                                              ],
+                                              "lhs-fn-params": {
+                                                "window": 10
+                                              },
+                                              "is-else-condition?": false,
+                                              "rhs-fixed-value?": true,
+                                              "lhs-fn": "relative-strength-index",
+                                              "lhs-val": "TQQQ",
+                                              "id": "5d222fd9-57ea-48d1-8a4a-d8215701ba95",
+                                              "comparator": "lt",
+                                              "rhs-val": "32",
+                                              "step": "if-child"
+                                            },
+                                            {
+                                              "step": "if-child",
+                                              "id": "f31e609d-3849-4a66-badb-59d9a5c7cfd7",
+                                              "is-else-condition?": true,
+                                              "children": [
+                                                {
+                                                  "step": "wt-cash-equal",
+                                                  "children": [
+                                                    {
+                                                      "step": "if",
+                                                      "children": [
+                                                        {
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "step": "asset",
+                                                                  "ticker": "UPRO",
+                                                                  "id": "e6472af5-4a07-447a-a6ee-a064ece62da3"
+                                                                }
+                                                              ],
+                                                              "id": "39d86a9e-3308-4b16-9715-8040863106ed"
+                                                            }
+                                                          ],
+                                                          "lhs-fn-params": {
+                                                            "window": 10
+                                                          },
+                                                          "is-else-condition?": false,
+                                                          "rhs-fixed-value?": true,
+                                                          "lhs-fn": "relative-strength-index",
+                                                          "lhs-val": "SPY",
+                                                          "id": "5bf28071-d2bd-4562-a65a-986dd820289b",
+                                                          "comparator": "lt",
+                                                          "rhs-val": "30",
+                                                          "step": "if-child"
+                                                        },
+                                                        {
+                                                          "step": "if-child",
+                                                          "id": "c7f9447d-28f3-4460-a052-9e0cdb850405",
+                                                          "is-else-condition?": true,
+                                                          "children": [
+                                                            {
+                                                              "step": "wt-cash-equal",
+                                                              "children": [
+                                                                {
+                                                                  "step": "if",
+                                                                  "children": [
+                                                                    {
+                                                                      "children": [
+                                                                        {
+                                                                          "id": "6dda808b-df00-47e7-8fcb-1f01ce02810e",
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "ticker": "SPY",
+                                                                              "exchange": "ARCX",
+                                                                              "name": "SPDR S&P 500 ETF Trust",
+                                                                              "id": "00e9d79d-b510-41bb-8f65-a0b7a5572ee7",
+                                                                              "step": "asset"
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ],
+                                                                      "lhs-fn-params": {
+                                                                        "window": 60
+                                                                      },
+                                                                      "is-else-condition?": false,
+                                                                      "rhs-fixed-value?": true,
+                                                                      "lhs-fn": "relative-strength-index",
+                                                                      "lhs-val": "SPY",
+                                                                      "id": "5dfafadf-db36-4225-8420-1776263cc399",
+                                                                      "comparator": "gt",
+                                                                      "rhs-val": "61",
+                                                                      "step": "if-child"
+                                                                    },
+                                                                    {
+                                                                      "step": "if-child",
+                                                                      "id": "70fa9314-cd73-4adb-8428-228c9c866e6d",
+                                                                      "is-else-condition?": true,
+                                                                      "children": [
+                                                                        {
+                                                                          "step": "wt-cash-equal",
+                                                                          "children": [
+                                                                            {
+                                                                              "step": "if",
+                                                                              "children": [
+                                                                                {
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "step": "wt-cash-equal",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "if",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "id": "e08f79cd-47ce-4e56-8f7f-10ffcfb5e879",
+                                                                                                  "step": "wt-cash-equal",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "ticker": "VIXY",
+                                                                                                      "exchange": "BATS",
+                                                                                                      "name": "ProShares VIX Short-Term Futures ETF",
+                                                                                                      "id": "1c02f41e-1524-4ebe-98e9-f203c85146d3",
+                                                                                                      "step": "asset"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ],
+                                                                                              "lhs-fn-params": {
+                                                                                                "window": 1
+                                                                                              },
+                                                                                              "is-else-condition?": false,
+                                                                                              "rhs-fixed-value?": true,
+                                                                                              "lhs-fn": "cumulative-return",
+                                                                                              "lhs-val": "TQQQ",
+                                                                                              "id": "1e6a2445-50a0-42bf-9a9b-14870f605532",
+                                                                                              "comparator": "gt",
+                                                                                              "rhs-val": "5.5",
+                                                                                              "step": "if-child"
+                                                                                            },
+                                                                                            {
+                                                                                              "step": "if-child",
+                                                                                              "id": "17d3e2a7-e28e-4f77-8499-29c9411a2ebc",
+                                                                                              "is-else-condition?": true,
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "step": "wt-cash-equal",
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "step": "group",
+                                                                                                      "name": "20d BND vs 60d SH",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "step": "wt-cash-equal",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "step": "if",
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "step": "wt-cash-equal",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "step": "if",
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "ticker": "TQQQ",
+                                                                                                                                      "exchange": "XNAS",
+                                                                                                                                      "name": "ProShares UltraPro QQQ",
+                                                                                                                                      "id": "ee02e783-8d0e-48fe-80ff-ea12c2f431c9",
+                                                                                                                                      "step": "asset"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "1918edc9-2d47-418b-9f35-cff16de37cfa"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "rhs-fn": "moving-average-price",
+                                                                                                                              "is-else-condition?": false,
+                                                                                                                              "lhs-fn": "current-price",
+                                                                                                                              "lhs-val": "SPY",
+                                                                                                                              "id": "57b3cca6-dda0-465c-a603-a3573ab0e3ec",
+                                                                                                                              "rhs-fn-params": {
+                                                                                                                                "window": 200
+                                                                                                                              },
+                                                                                                                              "comparator": "gt",
+                                                                                                                              "rhs-val": "SPY",
+                                                                                                                              "step": "if-child"
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                              "step": "if-child",
+                                                                                                                              "id": "b886ab67-a3f9-4883-a4c9-2c06f17729da",
+                                                                                                                              "is-else-condition?": true,
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "step": "if",
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "step": "if",
+                                                                                                                                                  "children": [
+                                                                                                                                                    {
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "ticker": "PSQ",
+                                                                                                                                                          "exchange": "ARCX",
+                                                                                                                                                          "name": "ProShares Short QQQ",
+                                                                                                                                                          "step": "asset",
+                                                                                                                                                          "id": "4a904ba1-18f7-4eff-a895-0aff8846e21e"
+                                                                                                                                                        }
+                                                                                                                                                      ],
+                                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                                        "window": 10
+                                                                                                                                                      },
+                                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                                                                      "lhs-val": "PSQ",
+                                                                                                                                                      "id": "27479711-0a6f-41de-b1e9-6cb9041c78e4",
+                                                                                                                                                      "comparator": "lt",
+                                                                                                                                                      "rhs-val": "30",
+                                                                                                                                                      "step": "if-child"
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                      "step": "if-child",
+                                                                                                                                                      "id": "ff1b88ab-a80b-4bd2-b1d6-eecce545a2da",
+                                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                                      "children": [
+                                                                                                                                                        {
+                                                                                                                                                          "ticker": "TQQQ",
+                                                                                                                                                          "exchange": "XNAS",
+                                                                                                                                                          "name": "ProShares UltraPro QQQ",
+                                                                                                                                                          "step": "asset",
+                                                                                                                                                          "id": "dc3e081b-03f9-43b0-8b1a-8bab24a5b7aa"
+                                                                                                                                                        }
+                                                                                                                                                      ]
+                                                                                                                                                    }
+                                                                                                                                                  ],
+                                                                                                                                                  "id": "8d7076b1-c9f8-4fbf-ba81-fde9d46a930b"
+                                                                                                                                                }
+                                                                                                                                              ],
+                                                                                                                                              "id": "ccf39326-afd8-49c7-b344-3b74910c1209"
+                                                                                                                                            }
+                                                                                                                                          ],
+                                                                                                                                          "rhs-fn": "moving-average-price",
+                                                                                                                                          "is-else-condition?": false,
+                                                                                                                                          "lhs-fn": "current-price",
+                                                                                                                                          "lhs-val": "TQQQ",
+                                                                                                                                          "id": "7d6989cc-de75-4621-8b2b-9adc277fccb8",
+                                                                                                                                          "rhs-fn-params": {
+                                                                                                                                            "window": 20
+                                                                                                                                          },
+                                                                                                                                          "comparator": "gt",
+                                                                                                                                          "rhs-val": "TQQQ",
+                                                                                                                                          "step": "if-child"
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                          "step": "if-child",
+                                                                                                                                          "id": "39143758-6977-4ed7-9ab0-f58bf1febfe5",
+                                                                                                                                          "is-else-condition?": true,
+                                                                                                                                          "children": [
+                                                                                                                                            {
+                                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                                              "children": [
+                                                                                                                                                {
+                                                                                                                                                  "ticker": "BIL",
+                                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                                  "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                                                                  "id": "9ce84f1f-2250-4603-88e1-9ebbcb466772",
+                                                                                                                                                  "step": "asset"
+                                                                                                                                                }
+                                                                                                                                              ],
+                                                                                                                                              "id": "d4f795d4-d848-4eb1-ab34-6fb703ea8c22"
+                                                                                                                                            }
+                                                                                                                                          ]
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "id": "6d4187c5-90ac-4a79-9ad7-27eac104fc58"
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "6a7cc0ee-781d-4ca0-9623-b116825fa413"
+                                                                                                                                }
+                                                                                                                              ]
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "id": "b84779ed-9681-4229-b1e8-211ddadde2d2"
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "id": "9d69c585-8151-468f-9623-abfa5057b3b1"
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "lhs-fn-params": {
+                                                                                                                    "window": 20
+                                                                                                                  },
+                                                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                                                  "is-else-condition?": false,
+                                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                                  "lhs-val": "BND",
+                                                                                                                  "id": "687fcf59-ccc0-4361-ae5e-9fca36b26556",
+                                                                                                                  "rhs-fn-params": {
+                                                                                                                    "window": 60
+                                                                                                                  },
+                                                                                                                  "comparator": "gt",
+                                                                                                                  "rhs-val": "SH",
+                                                                                                                  "step": "if-child"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                  "step": "if-child",
+                                                                                                                  "id": "db8aa9b1-69d7-47b3-ae0b-46a642126d73",
+                                                                                                                  "is-else-condition?": true,
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "step": "wt-cash-equal",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "ticker": "BIL",
+                                                                                                                          "exchange": "ARCX",
+                                                                                                                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                                          "id": "3b252c66-02af-4f1f-9256-a8168de62061",
+                                                                                                                          "step": "asset"
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "id": "827ff461-e373-4663-960a-f8c6baca83a5"
+                                                                                                                    }
+                                                                                                                  ]
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "id": "2a40ae3a-3409-49bd-be50-2b39c80ab93f"
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "id": "fad4f486-e0ed-4244-b2fd-d29c90a2788d"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "id": "e26434b1-7954-4c23-af0c-9b59d2fad9d1",
+                                                                                                      "collapsed?": true
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "id": "ed7d6ddd-f3d1-4734-99e5-d177d14886aa"
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ],
+                                                                                          "id": "0d3eb45b-fbe6-48b9-b636-dca39cd21114"
+                                                                                        }
+                                                                                      ],
+                                                                                      "id": "2b26c703-b6b7-4de4-9e5b-2feb35207643"
+                                                                                    }
+                                                                                  ],
+                                                                                  "lhs-fn-params": {
+                                                                                    "window": 6
+                                                                                  },
+                                                                                  "is-else-condition?": false,
+                                                                                  "rhs-fixed-value?": true,
+                                                                                  "lhs-fn": "cumulative-return",
+                                                                                  "lhs-val": "TQQQ",
+                                                                                  "id": "57e48011-c28e-4c3a-b741-aee2f67ed430",
+                                                                                  "comparator": "lt",
+                                                                                  "rhs-val": "-10.5",
+                                                                                  "step": "if-child"
+                                                                                },
+                                                                                {
+                                                                                  "step": "if-child",
+                                                                                  "id": "ca53cc8c-28b6-4c45-966f-d993dfe7dbe6",
+                                                                                  "is-else-condition?": true,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "step": "group",
+                                                                                      "name": "20d BND vs 60d SH",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "step": "wt-cash-equal",
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "step": "if",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "step": "if",
+                                                                                                          "children": [
+                                                                                                            {
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "ticker": "TQQQ",
+                                                                                                                      "exchange": "XNAS",
+                                                                                                                      "name": "ProShares UltraPro QQQ",
+                                                                                                                      "id": "04dfa119-ea5e-4833-af8e-e2f954f54b0d",
+                                                                                                                      "step": "asset"
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "id": "227b2cf7-3720-4272-885c-2044f7744bcc"
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "rhs-fn": "moving-average-price",
+                                                                                                              "is-else-condition?": false,
+                                                                                                              "lhs-fn": "current-price",
+                                                                                                              "lhs-val": "SPY",
+                                                                                                              "id": "5a2e4d15-9b7e-4dbb-8eec-769b6345213b",
+                                                                                                              "rhs-fn-params": {
+                                                                                                                "window": 200
+                                                                                                              },
+                                                                                                              "comparator": "gt",
+                                                                                                              "rhs-val": "SPY",
+                                                                                                              "step": "if-child"
+                                                                                                            },
+                                                                                                            {
+                                                                                                              "step": "if-child",
+                                                                                                              "id": "ce4387c0-ab8e-454d-bb3a-6b6e0f31eb6f",
+                                                                                                              "is-else-condition?": true,
+                                                                                                              "children": [
+                                                                                                                {
+                                                                                                                  "step": "wt-cash-equal",
+                                                                                                                  "children": [
+                                                                                                                    {
+                                                                                                                      "step": "if",
+                                                                                                                      "children": [
+                                                                                                                        {
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "step": "if",
+                                                                                                                                  "children": [
+                                                                                                                                    {
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "ticker": "PSQ",
+                                                                                                                                          "exchange": "ARCX",
+                                                                                                                                          "name": "ProShares Short QQQ",
+                                                                                                                                          "step": "asset",
+                                                                                                                                          "id": "10aa2eec-59ed-4e19-bad8-fb966ad9f530"
+                                                                                                                                        }
+                                                                                                                                      ],
+                                                                                                                                      "lhs-fn-params": {
+                                                                                                                                        "window": 10
+                                                                                                                                      },
+                                                                                                                                      "is-else-condition?": false,
+                                                                                                                                      "rhs-fixed-value?": true,
+                                                                                                                                      "lhs-fn": "relative-strength-index",
+                                                                                                                                      "lhs-val": "PSQ",
+                                                                                                                                      "id": "fc4e5410-d0b9-471c-a41b-86b3f51fe051",
+                                                                                                                                      "comparator": "lt",
+                                                                                                                                      "rhs-val": "30",
+                                                                                                                                      "step": "if-child"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                      "step": "if-child",
+                                                                                                                                      "id": "3f5646c4-54d8-4c87-9ed1-2a32db71a354",
+                                                                                                                                      "is-else-condition?": true,
+                                                                                                                                      "children": [
+                                                                                                                                        {
+                                                                                                                                          "ticker": "TQQQ",
+                                                                                                                                          "exchange": "XNAS",
+                                                                                                                                          "name": "ProShares UltraPro QQQ",
+                                                                                                                                          "step": "asset",
+                                                                                                                                          "id": "2fb72d81-baa6-4501-a20a-5900a1fd30cf"
+                                                                                                                                        }
+                                                                                                                                      ]
+                                                                                                                                    }
+                                                                                                                                  ],
+                                                                                                                                  "id": "66e0e8ed-6f06-4545-8964-e6e91b94a472"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "id": "63c443a6-0fd6-44a1-816f-4059e03ae0aa"
+                                                                                                                            }
+                                                                                                                          ],
+                                                                                                                          "rhs-fn": "moving-average-price",
+                                                                                                                          "is-else-condition?": false,
+                                                                                                                          "lhs-fn": "current-price",
+                                                                                                                          "lhs-val": "TQQQ",
+                                                                                                                          "id": "e282db57-b990-47dc-9b86-93be6757db8e",
+                                                                                                                          "rhs-fn-params": {
+                                                                                                                            "window": 20
+                                                                                                                          },
+                                                                                                                          "comparator": "gt",
+                                                                                                                          "rhs-val": "TQQQ",
+                                                                                                                          "step": "if-child"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                          "step": "if-child",
+                                                                                                                          "id": "d28997b6-a645-4ee5-a20f-1d3966aa686d",
+                                                                                                                          "is-else-condition?": true,
+                                                                                                                          "children": [
+                                                                                                                            {
+                                                                                                                              "step": "wt-cash-equal",
+                                                                                                                              "children": [
+                                                                                                                                {
+                                                                                                                                  "ticker": "BIL",
+                                                                                                                                  "exchange": "ARCX",
+                                                                                                                                  "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                                                  "id": "e666192e-bf73-4d2d-903d-4ddbd17ea9d4",
+                                                                                                                                  "step": "asset"
+                                                                                                                                }
+                                                                                                                              ],
+                                                                                                                              "id": "cc292496-8d66-4b5e-9eb1-047021d496ef"
+                                                                                                                            }
+                                                                                                                          ]
+                                                                                                                        }
+                                                                                                                      ],
+                                                                                                                      "id": "491b5ce6-436e-4e5b-92e5-427e3b07b2e6"
+                                                                                                                    }
+                                                                                                                  ],
+                                                                                                                  "id": "daae9e99-bd39-4819-b2b9-84933215b653"
+                                                                                                                }
+                                                                                                              ]
+                                                                                                            }
+                                                                                                          ],
+                                                                                                          "id": "6bb2bf85-1248-446c-a0be-c31be0a450d5"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "id": "229a4886-ca4c-4872-b018-834a541be40c"
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "lhs-fn-params": {
+                                                                                                    "window": 20
+                                                                                                  },
+                                                                                                  "rhs-fn": "relative-strength-index",
+                                                                                                  "is-else-condition?": false,
+                                                                                                  "lhs-fn": "relative-strength-index",
+                                                                                                  "lhs-val": "BND",
+                                                                                                  "id": "ebcce362-5911-4ed5-bf91-95352594aedb",
+                                                                                                  "rhs-fn-params": {
+                                                                                                    "window": 60
+                                                                                                  },
+                                                                                                  "comparator": "gt",
+                                                                                                  "rhs-val": "SH",
+                                                                                                  "step": "if-child"
+                                                                                                },
+                                                                                                {
+                                                                                                  "step": "if-child",
+                                                                                                  "id": "e87b3af7-d9c3-4398-bb5f-7893e4a1b9cf",
+                                                                                                  "is-else-condition?": true,
+                                                                                                  "children": [
+                                                                                                    {
+                                                                                                      "step": "wt-cash-equal",
+                                                                                                      "children": [
+                                                                                                        {
+                                                                                                          "ticker": "BIL",
+                                                                                                          "exchange": "ARCX",
+                                                                                                          "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+                                                                                                          "id": "4359f8a6-9f8d-4657-b757-c4c62f29b67f",
+                                                                                                          "step": "asset"
+                                                                                                        }
+                                                                                                      ],
+                                                                                                      "id": "08ada99a-e166-43a1-a189-daeec8729cb5"
+                                                                                                    }
+                                                                                                  ]
+                                                                                                }
+                                                                                              ],
+                                                                                              "id": "2b0cf2b2-1c97-46e9-a4cd-9e111c376996"
+                                                                                            }
+                                                                                          ],
+                                                                                          "id": "52d59752-f6e8-466b-b2f3-cda11e5f2c19"
+                                                                                        }
+                                                                                      ],
+                                                                                      "id": "46cd8151-07eb-4b89-ae7a-76ce94f226b5",
+                                                                                      "collapsed?": true
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ],
+                                                                              "id": "66136afc-cd3b-4e0f-8a6a-0f6e2c2c8c10"
+                                                                            }
+                                                                          ],
+                                                                          "id": "69f0f239-2a35-413d-8d89-9220de438c51"
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ],
+                                                                  "id": "3db466fb-0528-4edd-9de3-6f6a87a4b85d"
+                                                                }
+                                                              ],
+                                                              "id": "70110872-fde2-47db-939f-b328a16f7ded"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "id": "09974239-3695-47cc-9010-fdfe76a9f83a"
+                                                    }
+                                                  ],
+                                                  "id": "3819af68-10ee-4e96-bf6c-fc0f1b63925e"
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "id": "c7271aff-da32-4856-ac6d-a14ec28adf06"
+                                        }
+                                      ],
+                                      "id": "f4025692-bfef-4ce8-b2e1-5ce663a193b8"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "id": "a95611a1-ff39-435f-bb91-61eb26f97527"
+                            }
+                          ],
+                          "id": "c18e4ba6-49c0-41b5-8808-b344ac97a378"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "4628ff75-ae85-4c1c-b074-e5c3d9814b86"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "id": "f71f319c-3354-4acd-9289-7c7b1df3b1b2"
+    }
+  ],
+  "name": "Simple 20d BND vs 60d SH (Public) (Invest Copy)",
+  "rebalance-corridor-width": 0.05,
+  "rebalance": "none",
+  "id": "vqn38cK8ScBc0g956WNl",
+  "step": "root"
+}
